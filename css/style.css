@@ -1,0 +1,31 @@
+html {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+article {
+    max-width: 500px;
+    border: 10px solid #5353bb;
+    border-radius: 25px;
+    box-shadow: 10px 10px #888888;;
+
+    margin: auto;
+    width: 70%;
+    padding: 10px 25px 10px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+ol li, ul li {
+    margin-bottom: 15px;
+}
+
+select {
+    background-color: lightgray;
+}

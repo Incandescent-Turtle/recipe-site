@@ -1,0 +1,40 @@
+{
+  "title": "Classic Pico de Gallo",
+
+  "ingredients": [
+    {
+      "name": "white onion",
+      "amount": "1 cup"
+    },
+    {
+      "name": "jalapeno pepper",
+      "amount": "1 pepper",
+      "alternative-name": "serrano pepper",
+      "alternative-amount": "1 pepper"
+    },
+    {
+      "name": "lime juice",
+      "amount": "1/4 cup"
+    },
+    {
+      "name": "fine sea salt",
+      "amount": "3/4 teaspoons"
+    },
+    {
+      "name": "red tomatoes",
+      "amount": "1 1/2 pounds"
+    },
+    {
+      "name": "cilantro",
+      "amount": "1/2 cup"
+    }
+  ],
+
+  "steps": [
+    "In a medium serving bowl, combine the chopped onion, jalapeño, lime juice and salt. Let it marinate for about 5 minutes while you chop the tomatoes and cilantro.\n",
+
+    "Add the chopped tomatoes and cilantro to the bowl and stir to combine. Taste, and add more salt if the flavors don’t quite sing.\n",
+
+    "For the best flavor, let the mixture marinate for 15 minutes or several hours in the refrigerator. Serve as a dip, or with a slotted spoon or large serving fork to avoid transferring too much watery tomato juice with your pico. Pico de gallo keeps well in the refrigerator, covered, for up to 4 days.\n"
+  ]
+}

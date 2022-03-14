@@ -1,0 +1,16 @@
+optional things
+Additional notes
+credit/author
+
+make ingredients an array or something
+keyword, description (size (pinch), extra ripe, seedless/seeded, etc), amount (conversions)
+
+chickpeas, 1 cup
+carrots, 5
+
+
+prep time and cook time
+
+alternative measurements (by weight, amount, volume etc)
+each ingredient to have an additional notes section
+range in amount (2-3 tsps)
