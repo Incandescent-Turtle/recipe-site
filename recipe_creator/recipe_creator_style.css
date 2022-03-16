@@ -1,0 +1,46 @@
+.ingredient {
+    border-bottom: 2px solid #5353bb;
+    /*border-radius: 25px;*/
+    padding: 10px;
+    margin: 10px;
+}
+
+.ingredient input {
+    margin: 5px;
+}
+
+#instructions{
+    list-style-type: none;
+}
+
+.instruction textarea {
+    vertical-align: top;
+}
+
+
+label {
+    display: inline-block;
+    width: 210px;
+    text-align: right;
+}
+
+/*section {*/
+/*    display: inline;*/
+/*}*/
+
+#form {
+    float: left;
+    width: 40%;
+    height:100%;
+    margin-bottom: 20px;
+}
+
+#scratch_area {
+    float:right;
+    width: 60%;
+}
+
+#scratch_area textarea {
+    width: 100%;
+    position: fixed;
+}

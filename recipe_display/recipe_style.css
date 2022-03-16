@@ -3,7 +3,7 @@ html {
     font-family: Arial, sans-serif;
 }
 
-article {
+#recipe {
     max-width: 500px;
     border: 10px solid #5353bb;
     border-radius: 25px;
@@ -20,6 +20,10 @@ h1 {
 
 h1, h2 {
     text-align: center;
+}
+
+.separator {
+    border-top: 5px solid black;
 }
 
 ol li, ul li {

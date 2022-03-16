@@ -1,16 +1,12 @@
-optional things
-Additional notes
-credit/author
+add print function for recipes
 
-make ingredients an array or something
-keyword, description (size (pinch), extra ripe, seedless/seeded, etc), amount (conversions)
+make adding/removing ingredigients and instructions smooth
 
-chickpeas, 1 cup
-carrots, 5
+put nav bar on every page
 
-
-prep time and cook time
-
-alternative measurements (by weight, amount, volume etc)
-each ingredient to have an additional notes section
-range in amount (2-3 tsps)
+take json from php and download it ?? - download echoed page
+_______
+Recipe Formatting
+    add alergen/suitablity to recipe format (checkboxes in builder)
+    prep time and cook time
+    each ingredient to have an additional notes section that appeaar in brackets

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Recipe Creation</title>
+        <link rel="stylesheet" href="recipe_creator_style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Recipe Creation Tool</h1>
+        </header>
+        <main>
+            <section id="form">
+                <form action="json_builder.php" method="post">
+                    <h1>Recipe Form:</h1>
+                    <h2>Title</h2>
+                    <label for="title">Recipe Name:</label>
+                    <input type="text" id="title" name="title"><br><br>
+
+                    <h2>Ingredients</h2>
+                    <div id="ingredients"></div>
+                    <button type="button" id="add_ingredient">Add Ingredient</button>
+                    <button type="button" id="remove_ingredient">Remove Ingredient</button>
+
+                    <h2>Instructions</h2>
+                    <div id="instructions"></div>
+                    <button type="button" id="add_instruction">Add Instruction</button>
+                    <button type="button" id="remove_instruction">Remove Instruction</button>
+
+                    <h2>Additional Info</h2>
+
+                    <div class="row">
+                        <div class="filler"></div>
+                        <textarea name="additional_info" cols="30" rows="10"></textarea><br><br>
+                    </div>
+
+                    <h2>Credit</h2>
+                    <label>Author Name:</label>
+                    <input type="text" name="credit[author_name]"><br><br>
+                    <label>Author Site:</label>
+                    <input type="text" name="credit[author_link]"><br><br>
+                    <label>Link to recipe:</label>
+                    <input type="text" name="credit[link]"><br><br>
+
+                    <button type="submit">Create Recipe</button>
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+            </section>
+
+            <section id="scratch_area">
+                <textarea rows="100">
+                </textarea>
+            </section>
+        </main>
+        <script src="form_script.js"></script>
+    </body>
+</html>

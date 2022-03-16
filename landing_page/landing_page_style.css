@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    background-color: blue;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: lightblue;
+}

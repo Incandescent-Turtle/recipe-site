@@ -1,0 +1,4 @@
+reviews
+upload
+thumbnail for recipes
+auto add links/popup things for things like skillets etc to inform
