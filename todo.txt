@@ -1,12 +1,41 @@
 add print function for recipes
 
-make adding/removing ingredigients and instructions smooth
+make adding/removing ingredigients and instructions smooth - scroll (anchors)
 
 put nav bar on every page
 
 take json from php and download it ?? - download echoed page
+
+have a minimum of 1 instruction and one ingredient that you cant remove
+
+load old recipes into the form
+
+load previous answers into the form ?
+
+fix cookies with the form, so it can remember from last time (doesnt make much sense tho)
+
+show optional fields more clearly
 _______
 Recipe Formatting
     add alergen/suitablity to recipe format (checkboxes in builder)
+    appliances needed for recipe (food processor etc)
     prep time and cook time
+    classification (meal, soup, snack, etc)
+    alternate ingredient amounts (maybe in extra notes) - like weight, volume, etc
+    optional ingredients (topping, etc) - nutrition would be a range. amount not needed
     each ingredient to have an additional notes section that appeaar in brackets
+    Additional Info:
+        Serving instructions
+        Storing Instructions
+        Other (previously additional info)
+
+    multiple alternative ingredients
+    prep vs cook time (time object) vs wait time
+    maybe for storage have option for refridgerate or pantry or other, then have a notes section
+
+    description
+    servings
+
+
+
+

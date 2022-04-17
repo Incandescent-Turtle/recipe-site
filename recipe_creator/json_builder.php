@@ -2,45 +2,35 @@
 <?php
 //echo "<pre>".var_dump($_POST)."</pre>";
 
-$recipe_json = new stdClass();
+//  obj representing the whole recipe
+$recipe = new stdClass();
 
-$recipe_json->title = $_POST["title"];
+//  sets the title
+$recipe->title = trim($_POST["title"]);
 
-foreach($_POST["ingredients"] as $ingredient)
-{
-    $ingredient_obj = new stdClass();
+/*
+ *  Ingredients
+ */
+//  callback to trim and remove empty members
+$mapper = function($arr) {
+    return array_map('trim', array_filter($arr));
+};
+//  injects ingredients with all empty fields removed
+$recipe->ingredients = array_values(array_map($mapper, $_POST["ingredients"]));
 
-    foreach($ingredient as $name => $field)
-    {
-        if(!empty($field))
-        {
-            $ingredient_obj->$name = $field;
-        }
-    }
-    $recipe_json->ingredients[] = $ingredient_obj;
-}
+//  inject instructions trimmed
+$recipe->instructions = array_values(array_map('trim', $_POST["instructions"]));
 
-foreach($_POST["instructions"] as $instruction)
-{
-    $recipe_json->instructions[] = $instruction;
-}
-
+//  injects additional info if applicable
 if(!empty($_POST["additional_info"]))
 {
-    $recipe_json->additional_info = $_POST["additional_info"];
+    $recipe->additional_info = trim($_POST["additional_info"]);
 }
 
-$credit_obj = new stdClass();
-foreach($_POST["credit"] as $field => $content)
+//  injects credit fields if applicable
+if(sizeof($_POST["credit"])>0)
 {
-    if(!empty($content))
-    {
-        $credit_obj->$field = $content;
-    }
-}
-if(!sizeof(get_object_vars($credit_obj))==0)
-{
-    $recipe_json->credit = $credit_obj;
+    $recipe->credit = array_filter($_POST["credit"]);
 }
 
-echo json_encode($recipe_json, JSON_PRETTY_PRINT);
+echo "<pre>".json_encode($recipe, JSON_PRETTY_PRINT)."</pre>";

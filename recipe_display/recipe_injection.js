@@ -8,6 +8,10 @@ function init()
     let pico_button = document.getElementById("pico")
     pico_button.addEventListener("click", () => injectRecipe("pico de gallo.json"));
 
+    let pad_thai_button = document.getElementById("pad_thai")
+    pad_thai_button.addEventListener("click", () => injectRecipe("pad_thai.json"));
+
+
     injectRecipe("hummus.json")
 }
 
@@ -111,8 +115,8 @@ function insertCredit(obj)
         {
             show(link_p)
             const anchor = link_p.getElementsByTagName("a")[0]
-            anchor.href = credit.link
-            anchor.innerText = credit.link
+            anchor.href = credit.recipe_link
+            anchor.innerText = credit.recipe_link
         } else {
             hide(link_p)
         }

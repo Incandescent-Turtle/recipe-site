@@ -1,40 +1,92 @@
 {
   "title": "Hummus",
 
+  "time": {
+    "other": [
+      0,
+      0,
+      20
+    ]
+  },
+
+  "classification": [
+    "spread",
+    "dip"
+  ],
+
+  "allergens": [
+    "sesame"
+  ],
+
+  "suitability": [
+    "vegan",
+    "vegetarian",
+    "soy-free",
+    "gluten-free"
+  ],
+
+  "equipment": [
+    [
+      "food processor",
+      "blender"
+    ]
+  ],
+
   "ingredients": [
-  {
+    {
       "name": "chickpeas",
-      "amount": "1 can"
+      "amount": [
+        "1 can"
+      ],
+      "note": "Can be canned or home-cooked"
     },
     {
       "name": "fresh lemon juice",
-      "amount": "1/4 cup"
+      "amount": [
+        "1/4 cup"
+      ]
     },
     {
       "name": "tahini",
-      "amount": "1/4 cup"
+      "amount": [
+        "1/4 cup"
+      ]
     },
     {
       "name": "garlic",
-      "amount": "1 small clove"
+      "amount": [
+        [
+          "1 small clove"
+        ]
+      ]
     },
     {
       "name": "extra-virgin olive oil",
-      "amount": "2 tablespoons"
+      "amount": [
+        "2 tablespoons"
+      ]
     },
     {
       "name": "ground cumin",
-      "amount": "1/2 teaspoons"
+      "amount": [
+        "1/2 teaspoons"
+      ]
     },
     {
       "name": "water",
-      "amount": "2 to 3 tablespoons"
+      "amount": [
+        "2 to 3 tablespoons"
+      ]
     },
     {
       "name": "ground paprika",
-      "amount": "a dash",
+      "amount": [
+        "a dash"
+      ],
       "alternative_name": "sumac",
-      "alternative_amount": "a dash"
+      "alternative_amount": [
+        "a dash"
+      ]
     }
   ],
 
@@ -48,7 +100,13 @@
     "Taste for salt and adjust as needed. Serve hummus with a drizzle of olive oil and dash of paprika. Store homemade hummus in an airtight container and refrigerate up to one week."
   ],
 
-  "additional_info": "Serve with pita bread",
+  "additional_info": {
+    "serving": "Serve with pita bread",
+    "storing_style": "refrigerate",
+    "storing_note": "Mark with a date so you know when it was made",
+    "expiration": "3-4 days",
+    "other": "enjoy!"
+  },
 
   "credit":
   {

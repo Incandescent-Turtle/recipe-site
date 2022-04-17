@@ -2,3 +2,6 @@ reviews
 upload
 thumbnail for recipes
 auto add links/popup things for things like skillets etc to inform
+nutrition info auto calculated https://platform.fatsecret.com/api/
+somehow add images (different possible positions?)
+highlights ingredients that might be offensive to the things ticked

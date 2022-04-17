@@ -1,5 +1,10 @@
-added credit functionality  - link, author, author link
-added additional info section
-added landing page
-alternative ingredients dont need to specify an amount if its equal to the normal amount
-created a recipe creator using php. gives you JSON format
+switched to using template strings for readabiliity
+added new recipe data:
+    prep time
+    classification
+    allergens
+    suitability
+    tools/appliances required
+
+    updated additional info to include serving and storing instructions
+
