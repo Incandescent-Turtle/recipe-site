@@ -2,12 +2,11 @@
   "title": "Hummus",
 
   "time": {
-    "other": [
-      0,
-      0,
-      20
-    ]
-  },
+      "months": 0,
+      "days": 0,
+      "hours": 0,
+      "minutes": 30
+    },
 
   "classification": [
     "spread",
@@ -32,14 +31,25 @@
     ]
   ],
 
+  "storage": {
+    "storage_method": "refrigerate",
+    "note": "Mark with a date so you know when it was made"
+  },
+
+  "expiration": {
+    "months": 0,
+    "days": 7
+  },
+
   "ingredients": [
     {
       "name": "chickpeas",
       "amount": [
-        "1 can"
-      ],
-      "note": "Can be canned or home-cooked"
+        "1 can",
+        "400g"
+      ]
     },
+
     {
       "name": "fresh lemon juice",
       "amount": [
@@ -87,6 +97,13 @@
       "alternative_amount": [
         "a dash"
       ]
+    },
+    {
+      "name": "hot sauce",
+      "amount": [
+        "1 tsp"
+      ],
+      "optional": true
     }
   ],
 
@@ -100,13 +117,7 @@
     "Taste for salt and adjust as needed. Serve hummus with a drizzle of olive oil and dash of paprika. Store homemade hummus in an airtight container and refrigerate up to one week."
   ],
 
-  "additional_info": {
-    "serving": "Serve with pita bread",
-    "storing_style": "refrigerate",
-    "storing_note": "Mark with a date so you know when it was made",
-    "expiration": "3-4 days",
-    "other": "enjoy!"
-  },
+  "additional_info":  "Serve with pita bread!",
 
   "credit":
   {

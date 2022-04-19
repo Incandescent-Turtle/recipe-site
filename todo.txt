@@ -1,6 +1,6 @@
 add print function for recipes
 
-make adding/removing ingredigients and instructions smooth - scroll (anchors)
+make adding/removing ingredigients and instructions smooth - scroll (anchors?)
 
 put nav bar on every page
 

@@ -1,23 +1,12 @@
 {
   "title": "name of recipe", // required
 
-  //  each field is optional. day, hour, minute.
+  //  each field is optional
   "time": {
-    "prep": [
-      0,
-      0,
-      20
-    ],
-    "cook": [
-      0,
-      1,
-      0
-    ]
-    "other": [
-      0,
-      0,
-      20
-    ]
+    "months": 0,
+    "days": 0,
+    "hours": 0,
+    "minutes": 30
   },
 
   //  what kind of recipe is this? completely optional
@@ -44,7 +33,7 @@
   ],
 
   //  each is an array of tools that are interchangable. completely optional.
-  "tools": [
+  "equipment": [
     [
       "name of some appliance",
       "alternative appliance for same task"
@@ -67,7 +56,7 @@
         "amount of substitute ingredient if different than main ingredient",
         "amount of substitute in other measuring form"
       ],
-      "note": "anything you wanna say about this ingredient or its measuring"
+      "optional": true // trye or false, whether this item is optional. this field defailts to false
     },
     //  example
     {
@@ -77,9 +66,18 @@
         "1g"
       ],
       "alternative_name": "sumac",
-      "note": "ensure it isn't chunky"
     }
   ],
+
+  "storage": {
+    "storage_method": "refrigerate", // will be pre-defined and icons etc will be displayed (lil fridge etc)
+    "note": "Mark with a date so you know when it was made"
+  },
+
+  "expiration": {
+    "months": 0,
+    "days": 7
+  },
 
   "instructions": [ // required, min length of 1
     "The first instruction or step",
@@ -92,12 +90,7 @@
   ],
 
   //    this section is completely optional
-  "additional_info": [
-    "serving": "info about how to serve",  //  optional
-    "storing_style": "refrigerate",   //  optional. refridgerate, pantry.
-    "storing_note": "other information about storing (specific temperature, etc)"
-    "other": "anything not mentioned"      //optional
-  ],
+  "additional_info": "a note. extra serving or ingredient information, backstory, anything.",
 
   //    this section is completely optional
   "credit":

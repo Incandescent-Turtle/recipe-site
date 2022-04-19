@@ -24,6 +24,20 @@ async function injectRecipe(filename) {
 
     insertTitle(obj)
 
+    insertTime(obj)
+
+    insertClassification(obj)
+
+    insertAllergens(obj)
+
+    insertSuitability(obj)
+
+    insertEquipment(obj)
+
+    insertStorage(obj)
+
+    insertExpiration(obj)
+
     insertIngredients(obj)
 
     insertInstructions(obj)
@@ -35,8 +49,131 @@ async function injectRecipe(filename) {
 
 function insertTitle(obj)
 {
-    let title = document.getElementById('title');
+    const title = document.getElementById('title');
     title.innerText = obj.title
+}
+
+function insertTime(obj)
+{
+    const time_section = document.getElementById("time")
+    const time_pre = time_section.querySelector("pre")
+
+    if(obj.hasOwnProperty("time"))
+    {
+        show(time_section)
+        const time = obj.time
+        time_pre.innerText = "Time Needed: "
+        if(time["months"] > 0) time_pre.innerText += time["months"]+"mo"
+        if(time["days"] > 0) time_pre.innerText += time["days"]+"d"
+        if(time["hours"] > 0) time_pre.innerText += time["hours"]+"h"
+        if(time["minutes"] > 0) time_pre.innerText += time["minutes"]+"m"
+    } else {
+        hide(time_section)
+    }
+}
+
+function insertClassification(obj)
+{
+    const classification_section = document.getElementById("classification")
+    const classification_p = classification_section.querySelector("p")
+
+    if(obj.hasOwnProperty("classification") && obj.classification.length >=1)
+    {
+        show(classification_section)
+        const classification = obj.classification
+        classification_p.innerText = "Classification: " + classification.join(", ")
+    } else {
+        hide(classification_section)
+    }
+}
+function insertAllergens(obj)
+{
+    const allergens_section = document.getElementById("allergens")
+    const allergens_p = allergens_section.querySelector("p")
+
+    if(obj.hasOwnProperty("allergens") && obj.allergens.length >=1)
+    {
+        show(allergens_section)
+        const allergens = obj.allergens
+        allergens_p.innerText = "Allergens: " + allergens.join(", ")
+    } else {
+        hide(allergens_section)
+    }
+}
+
+function insertSuitability(obj)
+{
+    const suitability_section = document.getElementById("suitability")
+    const suitability_p = suitability_section.querySelector("p")
+
+    if(obj.hasOwnProperty("suitability") && obj.suitability.length >=1)
+    {
+        show(suitability_section)
+        const suitability = obj.suitability
+        suitability_p.innerText = "Suitability: " + suitability.join(", ")
+    } else {
+        hide(suitability_section)
+    }
+}
+
+function insertEquipment(obj)
+{
+    const equipment_section = document.getElementById("equipment")
+    const equipment_pre = equipment_section.querySelector("pre")
+
+    if(obj.hasOwnProperty("equipment") && obj.equipment.length >=1)
+    {
+        show(equipment_section)
+        const equipment = obj.equipment
+        equipment_pre.innerText = "Equipment: "
+        for(let i = 0; i < equipment.length; i++)
+        {
+           equipment_pre.innerText += equipment[i].join(" or ")
+            if(i < equipment.length-1) equipment_pre.innerText += ", "
+        }
+    } else {
+        hide(equipment_section)
+    }
+}
+
+function insertStorage(obj)
+{
+    const storage_section = document.getElementById("storage")
+    const storage_p = storage_section.querySelector("p")
+
+    if(obj.hasOwnProperty("storage") && Object.keys(obj.storage).length > 0)
+    {
+        show(storage_section)
+        const storage = obj.storage
+        storage_p.innerText = ""
+        if(storage.hasOwnProperty("storage_method"))
+        {
+            storage_p.innerText += "Storage Method: " + storage["storage_method"]
+        }
+        if(storage.hasOwnProperty("note"))
+        {
+            storage_p.innerText += "\nStorage Note: " + storage["note"]
+        }
+    } else {
+        hide(storage_section)
+    }
+}
+
+function insertExpiration(obj)
+{
+    const expiration_section = document.getElementById("expiration")
+    const expiration_pre = expiration_section.querySelector("pre")
+
+    if(obj.hasOwnProperty("expiration") && Object.keys(obj.expiration).length > 0)
+    {
+        show(expiration_section)
+        const expiration = obj.expiration
+        expiration_pre.innerText = "Expiration: "
+        if(expiration["months"] > 0) expiration_pre.innerText += expiration["months"]+"mo"
+        if(expiration["days"] > 0) expiration_pre.innerText += expiration["days"]+"d"
+    } else {
+        hide(expiration_section)
+    }
 }
 
 function insertIngredients(obj)
@@ -50,10 +187,25 @@ function insertIngredients(obj)
         const ingredient = JSON.parse(JSON.stringify(ingredients[i]))
         if(!ingredient.hasOwnProperty("alternative_name"))
         {
-            li.innerText = ingredient.amount + " " + ingredient.name
+            li.innerText = ""
+            if(ingredient.hasOwnProperty("optional") && ingredient.optional)
+            {
+                const pre = document.createElement("pre")
+                pre.style = "color:green; display:inline;";
+                pre.innerText = "Optional: "
+                li.appendChild(pre)
+            }
+            const ingredient_span = document.createElement("span")
+            ingredient_span.innerText += ingredient.amount.join(" or ") + " "
+            const span = document.createElement("span")
+            span.style = "font-weight: bold;"
+            span.innerText = ingredient.name
+            ingredient_span.appendChild(span)
+            li.appendChild(ingredient_span)
         } else {
+            // TODO make custom drop down menu for this to allow the boling of just the ingredient
             const alternative_amount = ingredient.hasOwnProperty("alternative_amount") ?  ingredient.alternative_amount : ingredient.amount
-            li.appendChild(createSelector(ingredient.amount + " " + ingredient.name, alternative_amount + " " + ingredient.alternative_name))
+            li.appendChild(createSelector(ingredient.amount.join(" or ") + " " + ingredient.name, alternative_amount.join(" or ") + " " + ingredient.alternative_name))
         }
         ingredients_list.appendChild(li);
     }

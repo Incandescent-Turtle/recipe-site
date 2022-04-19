@@ -3,6 +3,11 @@ html {
     font-family: Arial, sans-serif;
 }
 
+pre {
+    font-family: Arial, sans-serif;
+
+}
+
 #recipe {
     max-width: 500px;
     border: 10px solid #5353bb;
@@ -22,8 +27,16 @@ h1, h2 {
     text-align: center;
 }
 
-.separator {
-    border-top: 5px solid black;
+/*.separator {*/
+/*    border-top: 5px solid black;*/
+/*}*/
+
+hr {
+    /*border:none;*/
+    /*border-top:1px solid white;*/
+    background-color: black;
+    height:2px;
+    width:80%;
 }
 
 ol li, ul li {
